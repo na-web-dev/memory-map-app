@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* 要素横並び */
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+/* サイドバー領域 */
+.sidebar {
+  width: 250px;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+}
+
+/* map領域*/
+.map-area {
+  flex: 1;
+  padding: 20px;
+}
+
+/* +ボタン(画面右下に固定) */
+.fab {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+
+  font-size: 24px;
+}
