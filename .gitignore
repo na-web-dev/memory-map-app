@@ -1,0 +1,58 @@
+# =========================
+# frontend
+# =========================
+
+frontend/node_modules
+frontend/dist
+frontend/dist-ssr
+
+frontend/logs
+frontend/*.log
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+frontend/lerna-debug.log*
+
+frontend/*.local
+
+# =========================
+# backend (Rails)
+# =========================
+
+backend/.bundle
+
+backend/.env*
+backend/log/*
+backend/tmp/*
+
+!backend/log/.keep
+!backend/tmp/.keep
+
+backend/tmp/pids/*
+!backend/tmp/pids/
+!backend/tmp/pids/.keep
+
+backend/storage/*
+!backend/storage/.keep
+
+backend/tmp/storage/*
+!backend/tmp/storage/
+!backend/tmp/storage/.keep
+
+backend/config/*.key
+
+# =========================
+# editor / OS
+# =========================
+
+.vscode/
+.idea
+.DS_Store
+Thumbs.db
+
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
