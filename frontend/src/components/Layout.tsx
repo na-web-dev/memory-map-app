@@ -1,19 +1,30 @@
+import { useState } from "react";
 import "./Layout.css";
+import Header from "./Header";
+import MapArea from "./MapArea";
+import List from "./List";
+import Calendar from "./Calendar";
 
 export default function Layout() {
+  const [view, setView] = useState<string>("map");
+
   return (
-    <div className="layout">
-      <aside className="sidebar">
-        <h2>Memory Map</h2>
-        <h3>一覧</h3>
-        <h3>カレンダー</h3>
-      </aside>
+    <>
+      <Header />
+      <div className="layout">
+        <aside className="sidebar">
+          <button onClick={() => setView("list")}>一覧</button>
+          <button onClick={() => setView("calendar")}>カレンダー</button>
+        </aside>
 
-      <main className="map-area">
-        <h1>日本地図エリア</h1>
-      </main>
+        <main className="main-area">
+          {view === "map" && <MapArea />}
+          {view === "list" && <List />}
+          {view === "calendar" && <Calendar />}
+        </main>
 
-      <button className="fab">＋</button>
-    </div>
+        <button className="fab">＋</button>
+      </div>
+    </>
   );
 }

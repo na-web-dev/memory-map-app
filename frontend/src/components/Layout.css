@@ -4,12 +4,29 @@
 
 body {
   margin: 0;
+  background: #F7F9FB;
+  color: #334155;
+}
+
+/* ヘッダー */
+header {
+  height: 64px;
+  color: #FFFFFF;
+  background: #B0C4DE;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #dbe4ea;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
 }
 
 /* 要素横並び */
 .layout {
   display: flex;
-  height: 100vh;
+  height: calc(100vh - 64px);
 }
 
 /* サイドバー領域 */
@@ -17,10 +34,27 @@ body {
   width: 250px;
   padding: 20px;
   border-right: 1px solid #ccc;
+  background: #EEF2F5;
 }
 
-/* map領域*/
-.map-area {
+/* サイドバー：ボタン */
+.sidebar button {
+  display: block;
+  width: 100%;
+  border: none;
+  font-size: medium;
+  background: none;
+  text-align: left;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.sidebar button:hover {
+  background: #d7e2ea;
+}
+
+/* main領域*/
+.main-area {
   flex: 1;
   padding: 20px;
 }
@@ -30,10 +64,11 @@ body {
   position: fixed;
   right: 20px;
   bottom: 20px;
-
   width: 60px;
   height: 60px;
   border-radius: 50%;
-
   font-size: 24px;
+  font-weight:bold;
+  background: #B0C4DE;
+  color: #FFFFFF;
 }
